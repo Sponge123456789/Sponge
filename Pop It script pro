@@ -1,0 +1,1006 @@
+
+local function bsf()
+                        local n = false
+ 
+                        for i, v2 in pairs(workspace.Dropped:GetChildren()) do
+                            if
+                                v2.Owner.Value == game.Players.LocalPlayer or
+                                    v2.Owner.Value == game.Players.LocalPlayer.Character
+ 
+                                    --print("take")
+                             then
+                                 print("take")
+ 
+                                 for is, vs in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                                    if vs:IsA("MeshPart") or vs:IsA("BasePart") and v then
+                                        print("1n1", v2, vs)
+ 
+                                        firetouchinterest(vs, v2.Handle, 1)
+ 
+                                        firetouchinterest(vs, v2.Handle, 0)
+ 
+                                        --char.HumanoidRootPart.CFrame = v2.Handle.CFrame
+ 
+ 
+                                        n = true
+ 
+                                        print(2)
+ 
+                                        break
+                                    end
+                                 end
+ 
+                            print(3)
+                            end
+                        end
+ 
+                        if n then
+                            wait()
+ 
+                            bsf()
+                        end
+                    end
+ 
+                        bsf()
+ 
+--autodrop
+ 
+getgenv().autoDrop = true
+getgenv().selectDrop = nil
+ 
+function autoDrop()
+        while getgenv().autoDrop do 
+            wait(0.5)
+            game:GetService("ReplicatedStorage").RemoteEvents.Drop:FireServer(getgenv().selectDrop)
+            wait(0.5)
+            game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(getgenv().selectDrop)
+        end
+    end
+ 
+--autosell
+ 
+getgenv().autoSell = true
+getgenv().selectSell = nil
+ 
+function autoSell()
+        while getgenv().autoSell do 
+            wait(0.1)
+            game:GetService("ReplicatedStorage").RemoteEvents.Sell:FireServer(getgenv().selectSell)
+            wait(0.1)
+            game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(getgenv().selectSell)
+        end
+    end
+ 
+--autoBuy
+ 
+getgenv().autoBuy = true
+getgenv().selectItem = nil
+ 
+function autoBuy()
+        while getgenv().autoBuy do 
+            game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(getgenv().selectItem)
+            wait(0.1)
+        end
+    end
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local Win1 = DiscordLib:Window("Pop it trading script Made By xdkentryanborbon") -- Title/Name
+
+local Tab1 = Win1:Server("Script by xdkentryanborbon", "") -- Server/Tab
+
+local Chann1 = Tab1:Channel("Auto buy Puzzle and Lil") -- Channel 0_0
+local Chann2 = Tab1:Channel("Auto Buy Valentine's item") 
+local Chann3 = Tab1:Channel("Auto Buy Hand's") 
+local Chann4 = Tab1:Channel("Auto Buy Stranger things") 
+local Chann5 = Tab1:Channel("Auto Buy Rainbow Star/More") 
+local Chann6 = Tab1:Channel("Auto Buy Letter's") 
+local Chann7 = Tab1:Channel("Auto Buy Code item") 
+local Chann8 = Tab1:Channel("Auto Buy Box toy item") 
+local Chann9 = Tab1:Channel("Buy all item & More") 
+local Chann10 = Tab1:Channel("Get all Codes/Dupe") 
+local Chann11 = Tab1:Channel("Search item to Auto Buy") 
+
+Chann1:Button("Method", function()
+DiscordLib:Notification("Notification", "Clicked", "Okay!") -- The Scirpt The Button Executes
+end)
+
+Chann1:Seperator() -- Keep This If You Want To
+
+Chann1:Toggle("Auto Buy Lil Dude",false, function(state)
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Lil Dude Real" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann1:Toggle("Auto Buy Lil Hacker",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Lil Dude" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann1:Toggle("Auto Buy Roller Blades",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Roller Blades" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann1:Toggle("Auto Buy Puzzler Head",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Puzzler Head" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann1:Toggle("Auto Buy Puzzle Key",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Puzzle Key" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann2:Toggle("Auto Buy Heart Lightstick",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Heart Lightstick" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann2:Toggle("Auto Buy Heart Headphones",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Heart Headphones" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann2:Toggle("Auto Buy Heart Light",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Heart Light" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann2:Toggle("Auto Buy Heart Radio",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Heart Radio" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann2:Toggle("Auto Buy Heart Cake",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Heart Cake" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann2:Toggle("Auto Buy Heart Potion",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Heart Potion" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann2:Toggle("Auto Buy Heart Gift",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Heart Gift" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann3:Toggle("Auto Buy Hand Rainbow",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Hand Rainbow" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann3:Toggle("Auto Buy Hand Orange",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Hand Orange" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann3:Toggle("Auto Buy Hand Red",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Hand Red" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann3:Toggle("Auto Buy Hand White",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Hand White" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann3:Toggle("Auto Buy Hand Purple",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Hand Purple" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann4:Toggle("Auto Buy Demogorgan",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Demogorgan" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann4:Toggle("Auto Buy Demogorgan Kawaii",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Demogorgan Kawaii" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann4:Toggle("Auto Buy Green Ooze",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Green Ooze" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann4:Toggle("Auto Buy Dart",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Dart" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann5:Toggle("Auto Buy Rainbow Star",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Rainbow Star" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann5:Toggle("Auto Buy Gold Coin",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Gold Coin" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann5:Toggle("Auto Buy Helloshi",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Helloshi" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann5:Toggle("Auto Buy Luisi",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Luisi" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann5:Toggle("Auto Buy Markio",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Markio" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann5:Toggle("Auto Buy Omb Bomb",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Omb Bomb" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann6:Toggle("Auto Buy A",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "A" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann6:Toggle("Auto Buy B",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "B" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann6:Toggle("Auto Buy C",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "C" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann6:Toggle("Auto Buy D",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "D" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann6:Toggle("Auto Buy E",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "E" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann6:Toggle("Auto Buy F",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "F" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann7:Toggle("Auto Buy Silver Playbutton",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Silver" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann7:Toggle("Auto Buy Inxta",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Inxta" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann7:Toggle("Auto Buy Tweet",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Tweet" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann7:Toggle("Auto Buy XOX Controller",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "XOX Controller" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann7:Toggle("Auto Buy Tix Tox",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Tix Tox" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann8:Toggle("Auto Buy Box Toy",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Box Toy Box Toy" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann8:Toggle("Auto Buy Box Lem",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Box Toy Lem" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann8:Toggle("Auto Buy Box Air",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Box Toy Air" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann8:Toggle("Auto Buy Box Noob",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Box Toy Noob" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann8:Toggle("Auto Buy Box House",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Box Toy House" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann8:Toggle("Auto Buy Box Harambe",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Box Toy Harambe" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann8:Toggle("Auto Buy Box Sanic",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Box Toy Sanic" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann8:Toggle("Auto Buy Box Sandman",false, function(state) 
+if state then _G.on = true while _G.on do wait() local args = { [1] = "Box Toy SandMan" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) end else _G.on = false end end)
+
+Chann9:Button("Trade Value", function() 
+game.Players.localPlayer.XRay.Value = true
+
+end)
+
+Chann9:Button("Fake Drop", function() 
+local plr = game.Players.LocalPlayer
+
+local chr = plr.Character
+
+chr.RightHand:Destroy()
+
+end) 
+
+Chann9:Button("Reset", function() 
+local plr = game.Players.LocalPlayer
+
+local chr = plr.Character
+
+chr.Head:Destroy()
+end)
+
+Chann9:Button("Buy All Letters item", function() 
+wait(1) local args = { [1] = "F" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "A" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) local args = { [1] = "B" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "D" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "E" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "C" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) 
+end) 
+
+Chann9:Button("Buy All Stranger things item", function() 
+wait(1) local args = { [1] = "Demogorgan" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Demogorgan Kawaii" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) local args = { [1] = "Green Ooze" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Dart" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Retro Bike" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Walky Talky" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) 
+end) 
+
+Chann9:Button("Buy All Box Toy item", function() 
+wait(1) local args = { [1] = "Box Toy House" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Box Toy Noob" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) local args = { [1] = "Box Toy Air" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Box Toy Sanic" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Box Toy SandMan" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Box Toy Lem" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Box Toy Box Toy" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Box Toy Harambe" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) 
+end) 
+
+Chann9:Button("Buy All Valentine's item", function() 
+wait(1) local args = { [1] = "Heart Light" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Heart Gift" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) local args = { [1] = "Heart Headphones" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Heart Cake" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Heart Radio" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Heart Lightstick" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) 
+end) 
+
+Chann9:Button("Buy All Code item", function() 
+wait(1) local args = { [1] = "Tweet" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Inxta" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) local args = { [1] = "Tix Tox" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "XOX Controller" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Silver" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) 
+end) 
+
+Chann9:Button("Buy All Hand's item", function() 
+wait(1) local args = { [1] = "Hand White" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Hand Red" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) local args = { [1] = "Hand Purple" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Hand Black" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Hand Orange" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Hand Rainbow" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) 
+end) 
+
+Chann9:Button("Buy All Rainbow Star/More item", function() 
+wait(1) local args = { [1] = "Gold Coin" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Helloshi" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) local args = { [1] = "Luisi" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Markio" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) wait(1) local args = { [1] = "Rainbow Star" } game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer(unpack(args)) 
+end) 
+
+Chann10:Button("Get All Codes", function() 
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "/E codes",
+    [2] = "All"
+}
+
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "gummy"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "squid"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "lasagna"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "throne"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "1337"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "m0dn4r"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "éž­ç‚®"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "Tony"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "Loot"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "buff"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "2022"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "juaniday2021"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "ice"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "chance"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "sus"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "quidditch"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "inazuma"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "crystal"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "spooky21"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "no"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "cupid"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "sugar"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "armor?"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "stuffi"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "popit!"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "kitty"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "naughtyornice"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "trippy"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "noclip"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "90sec"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "upupup"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "code"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "farmer"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "r41nb0w"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "portal"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "pineapple"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "wth"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "lightemup"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "cute"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "gub"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "fotito"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "baila"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "Juego"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "lasagna"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "moo"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "100k"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "12345"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "stoked"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "b5nb5n"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "doilookpretty"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "categg"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "miaminights"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "letsgetweird"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "ewww"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "heartburn"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "holasoyd0ra"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "b4nb4n"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "itsalive!"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "metacarpus"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "kawa11"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "meoooow"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "thursday"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "fifi"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "youspinme"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "yodome"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "aredsword"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "daegg"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "halloweenie"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "callmemaybe"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "lachancla"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "knockknock"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "whaaaaaa"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "pepto"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "lasagna"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+wait(1)-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "******"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.RequestCode:FireServer(unpack(args))
+end)
+
+Chann10:Button("Safe Place Dark", function() 
+Instance.new('Part',workspace)
+Local = game:GetService('Players').LocalPlayer
+Char  = Local.Character
+touched,tpdback = false, false
+Local.CharacterAdded:connect(function(char)
+   if script.Disabled ~= true then
+       wait(.25)
+       loc = Char.HumanoidRootPart.Position
+       Char:MoveTo(box.Position + Vector3.new(0,.5,0))
+   end
+end)
+game:GetService('UserInputService').InputBegan:connect(function(key)
+   if key.KeyCode == Enum.KeyCode.Equals then
+       if script.Disabled ~= true then
+           script.Disabled = true
+           print'you may re-execute'
+       end
+   end
+end)
+box = Instance.new('Part',workspace)
+box.Anchored = true
+box.CanCollide = true
+box.Size = Vector3.new(180,1,180)
+box.Position = Vector3.new(0,450907,0)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,450909,0)
+end)
+
+Chann10:Button("Group Place", function() 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(15,19,-267)
+end)
+
+Chann10:Button("Spawn Place", function() 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(60,19,-267)
+end)
+
+Chann10:Toggle("Loop Speed",false, function(state) 
+if state then
+        print("Toggle On")
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+    else
+        print("Toggle Off")
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+
+Chann10:Toggle("Piano Dupe Crash",false, function(state) 
+if state then
+_G.on = true
+while _G.on
+do wait()
+        local args = {
+    [1] = "Piano"
+}
+
+game:GetService("ReplicatedStorage").RemoteEvents.Equip:FireServer(unpack(args))
+end
+          else
+_G.on = false
+end
+end)
+
+Chann10:Button("First", function() 
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+
+for i,v in pairs(plr.Backpack:GetChildren()) do
+v.Parent = char;
+v.Parent = workspace
+end
+end)
+
+Chann10:Button("Second",function()
+local player = game.Players.LocalPlayer
+local character = player.Character
+character:ClearAllChildren()
+character:LoadCharacter()
+end)
+
+Chann10:Button("Timer", function() 
+local plr = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui")
+gui.Parent = plr.PlayerGui
+gui.ResetOnSpawn = true
+local timer = Instance.new("TextLabel")
+timer.Parent = gui
+timer.BackgroundTransparency = 0
+timer.Size = UDim2.new(0.125, 0, 0.125, 0)
+timer.Position = UDim2.new(0, 0, 0.5 ,0)
+timer.TextXAlignment = Enum.TextXAlignment.Center
+timer.TextScaled = true
+timer.Text = "00:00:00"
+timer.TextColor3 = Color3.new(27, 42, 53)
+timer.Font = Enum.Font.Code
+local x = 0
+local y = 0
+local z = 0
+while wait(1) do
+	if z >= 60 then
+		y = y + 1
+		z = 0
+	end
+	if y >= 60 then
+		x = x + 1
+		y = 0
+	end
+	local tz = "00"
+	local ty = "00"
+	local tx = "00"
+	if z >= 10 then
+		tz = z
+	else
+		tz = "0" .. z
+	end
+	if y >= 10 then
+		ty = y
+	else
+		ty = "0" .. y
+	end
+	if x >= 10 then
+		tx = x
+	else
+		tx = "0" .. x
+	end
+	timer.Text = tx .. ":" .. ty .. ":" .. tz
+	z = z + 1
+end
+end)
+
+Chann10:Toggle("Auto Jump",false, function() 
+if state then
+        _G. on= true
+        while _G.on do
+            wait()
+            game:GetService("ReplicatedStorage").RemoteEvents.Jumped:FireServer()
+        end
+    else
+        _G.on = false
+    end
+end)
+
+Chann11:Toggle("Buy Item",false, function(Value) 
+getgenv().autoBuy = Value
+autoBuy()
+end)
+
+Chann11:Textbox("Item Name", "Type here!", false, function(Text) 
+getgenv().selectItem = Text
+print(getgenv().selectItem)
+end)
+
+Chann11:Toggle("Auto Drop",false, function(Value) 
+getgenv().autoDrop = Value
+autoDrop()
+end)
+
+Chann11:Textbox("Item Name", " Type here!", false, function(Text) 
+getgenv().selectDrop = Text
+print(getgenv().selectDrop)
+end)
+
+Chann11:Toggle("Auto Sell",false, function(Value) 
+getgenv().autoSell = Value
+autoSell()
+end)
+
+Chann11:Textbox("Item Name", "Type here!", false, function(Text) 
+getgenv().selectSell = Text
+print(getgenv().selectSell)
+end)
